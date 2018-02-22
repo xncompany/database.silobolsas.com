@@ -2,24 +2,25 @@ USE `silobolsas`;
 
 # ================================================================================================
 
-DROP TABLE IF EXISTS `users`;
+DROP TABLE IF EXISTS `silobags`;
 
-CREATE TABLE `users` (
+CREATE TABLE `silobags` (
  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
- `email` varchar(128) NOT NULL,
- `password` varchar(32) NOT NULL,
+ `id_user` bigint(20) NOT NULL,
+ `description` varchar(128) NOT NULL,
  `active` tinyint(1) unsigned NOT NULL,
  `created_at` datetime DEFAULT NULL,
 
- PRIMARY KEY (`id`)
+ PRIMARY KEY (`id`),
+ KEY `id_user` (`id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 # ================================================================================================
 
-DROP TABLE IF EXISTS `user_attributes`;
+DROP TABLE IF EXISTS `silobag_attributes`;
 
-CREATE TABLE `user_attributes` (
+CREATE TABLE `silobag_attributes` (
  `id` tinyint(10) unsigned NOT NULL AUTO_INCREMENT,
  `description` varchar(64) NOT NULL,
 
@@ -28,16 +29,16 @@ CREATE TABLE `user_attributes` (
 
 # ================================================================================================
 
-DROP TABLE IF EXISTS `user_attribute_values`;
+DROP TABLE IF EXISTS `silobag_attribute_values`;
 
-CREATE TABLE `user_attribute_values` (
+CREATE TABLE `silobag_attribute_values` (
  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
- `id_user` bigint(20) unsigned NOT NULL,
- `id_user_attribute` tinyint(10) unsigned NOT NULL,
+ `id_silobag` bigint(20) unsigned NOT NULL,
+ `id_silobag_attribute` tinyint(10) unsigned NOT NULL,
  `description` text NOT NULL,
 
  PRIMARY KEY (`id`),
- KEY `id_user` (`id_user`),
- KEY `id_user_attribute` (`id_user_attribute`)
+ KEY `id_silobag` (`id_silobag`),
+ KEY `id_silobag_attribute` (`id_silobag_attribute`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
