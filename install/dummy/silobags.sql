@@ -2,7 +2,7 @@ USE `silobolsas`;
 
 # ================================================================================================
 
-INSERT INTO `silobags` (`id`, `id_user`, `description`, `active`, `created_at`) VALUES
+INSERT INTO `silobags` (`id`, `id_land`, `description`, `active`, `created_at`) VALUES
 	(1, 1, 'silo#0001 - Las Gaviotas', 1, '2018-02-21 09:23:11');
 
 

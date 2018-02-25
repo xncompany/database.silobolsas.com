@@ -6,13 +6,13 @@ DROP TABLE IF EXISTS `silobags`;
 
 CREATE TABLE `silobags` (
  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
- `id_user` bigint(20) NOT NULL,
+ `id_land` bigint(20) unsigned NOT NULL,
  `description` varchar(128) NOT NULL,
  `active` tinyint(1) unsigned NOT NULL,
  `created_at` datetime DEFAULT NULL,
 
  PRIMARY KEY (`id`),
- KEY `id_user` (`id_user`)
+ KEY `id_land` (`id_land`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
