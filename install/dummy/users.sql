@@ -14,7 +14,7 @@ INSERT INTO `user_attributes` (`id`, `description`) VALUES
     (3, 'profile-picture-url');
 
 
-INSERT INTO `user_attribute_values` (`id`, `id_user`, `id_user_attribute`, `description`) VALUES
+INSERT INTO `user_attribute_values` (`id`, `user`, `user_attribute`, `description`) VALUES
 	(null, 1, 1, 'Luciano Verardo'),
 	(null, 1, 2, 'Las Gaviotas'),
 	(null, 1, 3, 'https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAKpAAAAJDJiZGE4YzhmLTVhNDQtNDY2ZC1hNGJiLTQ1MzA0MGZmNGVhMw.jpg');

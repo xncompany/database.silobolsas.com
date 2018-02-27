@@ -6,13 +6,13 @@ DROP TABLE IF EXISTS `silobags`;
 
 CREATE TABLE `silobags` (
  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
- `id_land` bigint(20) unsigned NOT NULL,
+ `land` bigint(20) unsigned NOT NULL,
  `description` varchar(128) NOT NULL,
  `active` tinyint(1) unsigned NOT NULL,
  `created_at` datetime DEFAULT NULL,
 
  PRIMARY KEY (`id`),
- KEY `id_land` (`id_land`)
+ KEY `land` (`land`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
@@ -33,12 +33,12 @@ DROP TABLE IF EXISTS `silobag_attribute_values`;
 
 CREATE TABLE `silobag_attribute_values` (
  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
- `id_silobag` bigint(20) unsigned NOT NULL,
- `id_silobag_attribute` tinyint(10) unsigned NOT NULL,
+ `silobag` bigint(20) unsigned NOT NULL,
+ `silobag_attribute` tinyint(10) unsigned NOT NULL,
  `description` text NOT NULL,
 
  PRIMARY KEY (`id`),
- KEY `id_silobag` (`id_silobag`),
- KEY `id_silobag_attribute` (`id_silobag_attribute`)
+ KEY `silobag` (`silobag`),
+ KEY `silobag_attribute` (`silobag_attribute`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

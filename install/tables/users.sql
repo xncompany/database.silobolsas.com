@@ -32,12 +32,12 @@ DROP TABLE IF EXISTS `user_attribute_values`;
 
 CREATE TABLE `user_attribute_values` (
  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
- `id_user` bigint(20) unsigned NOT NULL,
- `id_user_attribute` tinyint(10) unsigned NOT NULL,
+ `user` bigint(20) unsigned NOT NULL,
+ `user_attribute` tinyint(10) unsigned NOT NULL,
  `description` text NOT NULL,
 
  PRIMARY KEY (`id`),
- KEY `id_user` (`id_user`),
- KEY `id_user_attribute` (`id_user_attribute`)
+ KEY `user` (`user`),
+ KEY `user_attribute` (`user_attribute`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

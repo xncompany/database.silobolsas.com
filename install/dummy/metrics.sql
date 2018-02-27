@@ -2,7 +2,7 @@ USE `silobolsas`;
 
 # ================================================================================================
 
-INSERT INTO `metrics` (`id`, `id_device`, `id_metric_type`, `id_metric_status`, `id_metric_unit`, `amount`, `created_at`) VALUES
+INSERT INTO `metrics` (`id`, `device`, `metric_type`, `metric_status`, `metric_unit`, `amount`, `created_at`) VALUES
 	(null, 1, 1, 1, 1, 35.31, '2018-03-01 11:34:15'),
 	(null, 1, 2, 1, 2, 60.41, '2018-03-01 11:34:16'),
 	(null, 1, 3, 1, 2, 1.15, '2018-03-01 11:34:19'),
@@ -20,7 +20,7 @@ INSERT INTO `metrics` (`id`, `id_device`, `id_metric_type`, `id_metric_status`, 
 	(null, 3, 5, 1, 3, 5500, '2018-03-01 11:34:19');
 
 
-INSERT INTO `metric_types` (`id`, `id_device_type`, `description`) VALUES
+INSERT INTO `metric_types` (`id`, `device_type`, `description`) VALUES
     (1, 1, 'temperature'),
     (2, 1, 'humidity'),
     (3, 1, 'CO2'),
