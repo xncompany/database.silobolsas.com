@@ -42,7 +42,8 @@ CREATE TABLE `device_types` (
  `name` varchar(16) NOT NULL,
  `description` varchar(64) DEFAULT NULL,
 
- PRIMARY KEY (`id`)
+ PRIMARY KEY (`id`),
+ KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 # ================================================================================================
