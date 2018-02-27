@@ -6,7 +6,7 @@ DROP TABLE IF EXISTS `devices`;
 
 CREATE TABLE `devices` (
  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
- `less` bigint(20) unsigned NOT NULL,
+ `less_id` bigint(20) unsigned NOT NULL,
  `silobag` bigint(20) NOT NULL,
  `description` varchar(128) NOT NULL,
  `type` tinyint(10) NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE `devices` (
 
  PRIMARY KEY (`id`),
  KEY `silobag` (`silobag`),
- KEY `less` (`less`),
+ KEY `less_id` (`less_id`),
  KEY `type` (`type`),
  KEY `active` (`active`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
