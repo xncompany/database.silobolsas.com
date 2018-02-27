@@ -40,7 +40,7 @@ DROP TABLE IF EXISTS `device_types`;
 CREATE TABLE `device_types` (
  `id` tinyint(10) unsigned NOT NULL AUTO_INCREMENT,
  `name` varchar(16) NOT NULL,
- `description` varchar(64) NOT NULL,
+ `description` varchar(64) DEFAULT NULL,
 
  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
