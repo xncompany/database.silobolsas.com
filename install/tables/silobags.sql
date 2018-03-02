@@ -6,14 +6,12 @@ DROP TABLE IF EXISTS `silobags`;
 
 CREATE TABLE `silobags` (
  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
- `less_id` bigint(20) unsigned NOT NULL,
  `land` bigint(20) unsigned DEFAULT NULL,
  `description` varchar(128) NOT NULL,
  `active` tinyint(1) unsigned NOT NULL,
  `created_at` datetime DEFAULT NULL,
 
  PRIMARY KEY (`id`),
- KEY `less_id` (`less_id`),
  KEY `land` (`land`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
