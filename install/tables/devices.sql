@@ -60,22 +60,3 @@ CREATE TABLE `device_attribute_values` (
  KEY `device` (`device`),
  KEY `device_attribute` (`device_attribute`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-# ================================================================================================
-
-
-DROP TABLE IF EXISTS `device_criticality`;
-
-CREATE TABLE `device_criticality` (
- `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
- `device` bigint(20) NOT NULL,
- `metric_type` tinyint(10) NOT NULL,
- `metric_status` tinyint(10) NOT NULL,
- `min_amount` decimal(20,6) NOT NULL,
- `max_amount` decimal(20,6) NOT NULL,
-
- PRIMARY KEY (`id`),
- KEY `device` (`device`),
- UNIQUE `device.metric_type.metric_status` (`device`, `metric_type`, `metric_status`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
