@@ -5,7 +5,8 @@ USE `silobolsas`;
 # Password 00e8579911e947913fa6a5f5cf60abe7 is equivalent to 'xncompany'
 
 INSERT INTO `users` (`id`, `email`, `password`, `active`, `created_at`) VALUES
-    (1, 'lverardo@xncompany.com', '00e8579911e947913fa6a5f5cf60abe7', 1, '2017-01-09 01:55:12');
+    (1, 'lverardo@xncompany.com', '00e8579911e947913fa6a5f5cf60abe7', 1, '2017-01-09 01:55:12'),
+    (2, 'jhon.doe@xncompany.com', '79130abe7fa600e857a5f5cf69911e94', 1, '2017-01-29 12:15:04');
 
 
 INSERT INTO `user_attributes` (`id`, `description`) VALUES
@@ -17,4 +18,7 @@ INSERT INTO `user_attributes` (`id`, `description`) VALUES
 INSERT INTO `user_attribute_values` (`id`, `user`, `user_attribute`, `description`) VALUES
 	(null, 1, 1, 'Luciano Verardo'),
 	(null, 1, 2, 'Las Gaviotas'),
+	(null, 1, 3, 'https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAKpAAAAJDJiZGE4YzhmLTVhNDQtNDY2ZC1hNGJiLTQ1MzA0MGZmNGVhMw.jpg'),
+	(null, 1, 1, 'Jhon Doe'),
+	(null, 1, 2, 'El Paye'),
 	(null, 1, 3, 'https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAKpAAAAJDJiZGE4YzhmLTVhNDQtNDY2ZC1hNGJiLTQ1MzA0MGZmNGVhMw.jpg');

@@ -13,8 +13,10 @@ INSERT INTO `device_attributes` (`id`, `description`) VALUES
     (2, 'longitude'),
     (3, 'identification-number');
 
+
 INSERT INTO `device_types` (`id`, `name`, `description`) VALUES
     (1, 'lanza', 'Lanza');
+
 
 INSERT INTO `device_attribute_values` (`id`, `device`, `device_attribute`, `description`) VALUES
 	(null, 1, 1, '-34.866293'),
