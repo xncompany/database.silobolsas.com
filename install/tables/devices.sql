@@ -30,7 +30,8 @@ CREATE TABLE `device_attributes` (
  `id` tinyint(10) unsigned NOT NULL AUTO_INCREMENT,
  `description` varchar(64) NOT NULL,
 
- PRIMARY KEY (`id`)
+ PRIMARY KEY (`id`),
+ KEY `description` (`description`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 # ================================================================================================
