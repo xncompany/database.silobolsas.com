@@ -13,8 +13,8 @@ INSERT INTO `device_attributes` (`id`, `description`, `created_at`) VALUES
     (2, 'longitude', '2018-02-21 09:23:11'),
     (3, 'identification-number', '2018-02-21 09:23:11');
 
-INSERT INTO `device_types` (`id`, `name`, `description`) VALUES
-    (1, 'lanza', 'Lanza');
+INSERT INTO `device_types` (`id`, `name`, `description`, `created_at`) VALUES
+    (1, 'lanza', 'Lanza', '2018-02-21 09:23:11');
 
 INSERT INTO `device_attribute_values` (`id`, `device`, `device_attribute`, `description`, `created_at`) VALUES
 	(null, 1, 1, '-34.866293', '2018-02-21 09:23:11'),
