@@ -20,17 +20,17 @@ INSERT INTO `metrics` (`id`, `device`, `metric_type`, `metric_status`, `metric_u
 	(null, 3, 5, 1, 3, 5500, '2018-03-01 11:34:19');
 
 
-INSERT INTO `metric_types` (`id`, `device_type`, `description`) VALUES
-    (1, 1, 'temperature'),
-    (2, 1, 'humidity'),
-    (3, 1, 'CO2'),
-    (4, 1, 'battery_charge'),
-    (5, 1, 'battery_voltage');
+INSERT INTO `metric_types` (`id`, `device_type`, `description`, `created_at`) VALUES
+    (1, 1, 'temperature', '2018-03-01 11:39:45'),
+    (2, 1, 'humidity', '2018-03-01 11:39:45'),
+    (3, 1, 'CO2', '2018-03-01 11:39:45'),
+    (4, 1, 'battery_charge', '2018-03-01 11:39:45'),
+    (5, 1, 'battery_voltage', '2018-03-01 11:39:45');
 
-INSERT INTO `metric_units` (`id`, `description`) VALUES
-    (1, 'C'),
-    (2, '%'),
-    (3, 'mV');
+INSERT INTO `metric_units` (`id`, `description`, `created_at`) VALUES
+    (1, 'C', '2018-03-01 11:39:45'),
+    (2, '%', '2018-03-01 11:39:45'),
+    (3, 'mV', '2018-03-01 11:39:45');
 
 INSERT INTO `metric_status` (`id`, `description`) VALUES
     (1, 'normal'),
