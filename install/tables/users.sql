@@ -9,11 +9,22 @@ CREATE TABLE `users` (
  `email` varchar(128) NOT NULL,
  `password` varchar(32) NOT NULL,
  `active` tinyint(1) unsigned NOT NULL,
+ `user_type` tinyint(10) NOT NULL,
  `created_at` datetime DEFAULT NULL,
 
  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+# ================================================================================================
+
+DROP TABLE IF EXISTS `user_types`;
+
+CREATE TABLE `user_types` (
+ `id` tinyint(10) unsigned NOT NULL AUTO_INCREMENT,
+ `description` varchar(10) NOT NULL,
+
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 # ================================================================================================
 
