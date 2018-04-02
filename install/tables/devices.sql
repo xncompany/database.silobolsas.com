@@ -29,6 +29,7 @@ DROP TABLE IF EXISTS `device_attributes`;
 CREATE TABLE `device_attributes` (
  `id` tinyint(10) unsigned NOT NULL AUTO_INCREMENT,
  `description` varchar(64) NOT NULL,
+ `created_at` datetime DEFAULT NULL,
 
  PRIMARY KEY (`id`),
  KEY `description` (`description`)
@@ -56,6 +57,7 @@ CREATE TABLE `device_attribute_values` (
  `device` bigint(20) unsigned NOT NULL,
  `device_attribute` tinyint(10) unsigned NOT NULL,
  `description` text NOT NULL,
+ `created_at` datetime DEFAULT NULL,
 
  PRIMARY KEY (`id`),
  KEY `device` (`device`),
