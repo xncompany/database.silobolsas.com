@@ -10,6 +10,7 @@ CREATE TABLE `users` (
  `password` varchar(32) NOT NULL,
  `active` tinyint(1) unsigned NOT NULL,
  `user_type` tinyint(10) NOT NULL,
+ `organization` int(10) NOT NULL,
  `created_at` datetime DEFAULT NULL,
 
  PRIMARY KEY (`id`)
