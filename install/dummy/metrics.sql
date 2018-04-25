@@ -34,5 +34,24 @@ INSERT INTO `metric_units` (`id`, `description`, `created_at`) VALUES
 
 INSERT INTO `metric_status` (`id`, `description`) VALUES
     (1, 'normal'),
-    (2, 'critical'),
-    (3, 'risk');
+    (2, 'warning'),
+    (3, 'critical');
+
+INSERT INTO `metric_configuration_types` (`id`, `description`) VALUES
+    (1, 'range'),
+    (2, 'delta');
+
+
+INSERT INTO `metric_configurations` (`id`, `id_metric_type`, `id_metric_status`, `id_metric_configuration_type`, `rangeA`, `rangeB`, `updated_at`) VALUES
+    (111, 1, 1, 1, 0, 10, '2018-03-01 11:39:45'),
+    (121, 1, 2, 1, 10.01, 20, '2018-03-01 11:39:45'),
+    (131, 1, 3, 1, 20.01, 100, '2018-03-01 11:39:45'),
+    (211, 2, 1, 1, 0, 14.0, '2018-03-01 11:39:45'),
+    (221, 2, 2, 1, 14.01, 16.0, '2018-03-01 11:39:45'),
+    (231, 2, 3, 1, 16.01, 100, '2018-03-01 11:39:45'),
+    (311, 3, 1, 1, 0, 4.40, '2018-03-01 11:39:45'),
+    (321, 3, 2, 1, 4.41, 4.99, '2018-03-01 11:39:45'),
+    (331, 3, 3, 1, 5.00, 100, '2018-03-01 11:39:45'),
+    (122, 1, 2, 2, 1, 2.0, '2018-03-01 11:39:45'),
+    (222, 2, 2, 2, 1, 1.0, '2018-03-01 11:39:45'),
+    (322, 3, 2, 2, 0, 0.5,'2018-03-01 11:39:45');

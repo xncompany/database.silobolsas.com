@@ -72,3 +72,32 @@ CREATE TABLE `metric_status` (
  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+
+# ================================================================================================
+
+DROP TABLE IF EXISTS `metric_configuration_types`;
+
+CREATE TABLE `metric_configuration_types` (
+ `id` tinyint(10) unsigned NOT NULL AUTO_INCREMENT,
+ `description` varchar(64) NOT NULL,
+
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+# ================================================================================================
+
+DROP TABLE IF EXISTS `metric_configurations`;
+
+CREATE TABLE `metric_configurations` (
+ `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+ `id_metric_type` tinyint(10) unsigned NOT NULL,
+ `id_metric_status` tinyint(10) unsigned NOT NULL,
+ `id_metric_configuration_type` tinyint(10) unsigned NOT NULL,
+ `rangeA` decimal(20,2) NOT NULL,
+ `rangeB` decimal(20,2) NOT NULL,
+ `updated_at` datetime DEFAULT NULL,
+
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
