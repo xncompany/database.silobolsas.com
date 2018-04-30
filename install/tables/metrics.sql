@@ -8,7 +8,7 @@ CREATE TABLE `metrics` (
  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
  `device` bigint(20) NOT NULL,
  `metric_type` tinyint(10) NOT NULL,
- `metric_status` tinyint(10) DEFAULT NULL,
+ `metric_status` tinyint(10) NOT NULL,
  `metric_unit` tinyint(10) NOT NULL,
  `amount` decimal(20,6) NOT NULL,
  `created_at` datetime DEFAULT NULL,
@@ -16,7 +16,8 @@ CREATE TABLE `metrics` (
  PRIMARY KEY (`id`),
  KEY `device` (`device`),
  KEY `metric_type` (`metric_type`),
- KEY `metric_unit` (`metric_unit`)
+ KEY `metric_unit` (`metric_unit`),
+ KEY `metrics_idx` (`device`,`metric_type`,`metric_unit`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 # ================================================================================================
@@ -27,11 +28,13 @@ CREATE TABLE `metrics_history` (
  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
  `device` bigint(20) NOT NULL,
  `metric_type` tinyint(10) NOT NULL,
+ `metric_status` tinyint(10) NOT NULL,
  `metric_unit` tinyint(10) NOT NULL,
  `amount` decimal(20,6) NOT NULL,
  `created_at` datetime DEFAULT NULL,
 
- PRIMARY KEY (`id`)
+ PRIMARY KEY (`id`),
+ KEY `metrics_history_idx` (`device`,`metric_type`,`metric_unit`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 # ================================================================================================
@@ -98,6 +101,7 @@ CREATE TABLE `metric_configurations` (
  `rangeB` decimal(20,2) NOT NULL,
  `updated_at` datetime DEFAULT NULL,
 
- PRIMARY KEY (`id`)
+ PRIMARY KEY (`id`),
+ KEY `metric_configurations_idx` (`id_metric_type`,`id_metric_configuration_type`,`rangeA`,`rangeB`),
+ KEY `metric_configurations_idx_2` (`id_metric_type`,`id_metric_configuration_type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
