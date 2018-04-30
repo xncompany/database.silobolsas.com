@@ -31,10 +31,12 @@ CREATE TABLE `metrics_history` (
  `metric_status` tinyint(10) NOT NULL,
  `metric_unit` tinyint(10) NOT NULL,
  `amount` decimal(20,6) NOT NULL,
+ `alert_sent` tinyint(1) DEFAULT 0,
  `created_at` datetime DEFAULT NULL,
 
  PRIMARY KEY (`id`),
- KEY `metrics_history_idx` (`device`,`metric_type`,`metric_unit`)
+ KEY `metrics_history_idx` (`device`,`metric_type`,`metric_unit`),
+ KEY `metrics_history_idx_2` (`metric_status`,`alert_sent`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 # ================================================================================================
