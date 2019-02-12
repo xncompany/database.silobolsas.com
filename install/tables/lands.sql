@@ -19,3 +19,17 @@ CREATE TABLE `lands` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 # ================================================================================================
+
+
+DROP TABLE IF EXISTS `user_land`;
+
+CREATE TABLE `user_land` (
+ `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+ `user` bigint(20) NOT NULL,
+ `land` int(10) NOT NULL,
+ `created_at` datetime DEFAULT NULL,
+
+ PRIMARY KEY (`id`),
+ KEY `user` (`user`),
+ KEY `land` (`land`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
